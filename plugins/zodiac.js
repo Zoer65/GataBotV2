@@ -19,7 +19,6 @@ let handler = (m, { usedPrefix, command, text }) => {
 ✨ *Proximo cumpleaños:* ${birthday.join('-')}
 ✨ *Edad:* ${cekusia}
 ✨ *Signo zodical:* ${zodiac}
-🐈 𝙂𝙖𝙩𝙖 𝘿𝙞𝙤𝙨 🐈
 `.trim()
     m.reply(teks)
 }
