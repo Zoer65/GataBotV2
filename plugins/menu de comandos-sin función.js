@@ -21,22 +21,10 @@ let handler = async (m, { conn, usedPrefix }) => {
     let { min, xp, max } = levelling.xpRange(level, global.multiplier)
     let username = conn.getName(who)
     let str = `
-╭══〘 🐈⚡️🐈⚡️🐈⚡️🐈 〙══╮
-║═ 𝙂𝙖𝙩𝙖𝘽𝙤𝙩 | 𝙂𝙖𝙩𝙖 𝘿𝙞𝙤𝙨
-║≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
-║❇️ *¡𝗛ola! ${username}* ❇️
-║≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
-║🔰 *Creadora/Editora: Gata Dios* 
-║≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
-╰══〘 🐈⚡️🐈⚡️🐈⚡️🐈 〙══╯
 ┏━━━━━━━━━━━━━━━━━━┓
 ┃ *INFORMACIÓN|MENUS*
-┃≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡ 
-┣ ↠⚜️ _${usedPrefix}donar_
-┣ ↠⚜️ _${usedPrefix}creditos_ 
-┣ ↠⚜️ _${usedPrefix}infobot_
+┃≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡  
 ┣ ↠⚜️ _${usedPrefix}grupos_
-┣ ↠⚜️ _${usedPrefix}instalarbot_
 ┣ ↠⚜️ _${usedPrefix}reglas_
 ┣ ↠⚜️ _${usedPrefix}menusimple_
 ┣ ↠⚜️ _${usedPrefix}menuaudios_
@@ -45,22 +33,12 @@ let handler = async (m, { conn, usedPrefix }) => {
 ┣ ↠⚜️ _${usedPrefix}estado_
 ┣ ↠⚜️ _¿Qué es un Bot?_
 ┣ ↠⚜️ _Codigos para audios_
-┣ ↠⚜️ _Términos y condiciones_
-┗━━━━━━━━━━━━━━━━━━┛
-┏━━━━━━━━━━━━━━━━━━┓
-┃ *REPORTA FALLOS DE COMANDOS*
-┃≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
-┃  Reporta cualquier comando que falle    ┃  para poder solucionarlo
-┃≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
-┣ ↠📮 _${usedPrefix}bug *tal comando con fallas*_
-┣ ↠📮 _${usedPrefix}report *tal comando con fallas*_
-┣ ↠📮 _${usedPrefix}reporte *tal comando con fallas*_
 ┗━━━━━━━━━━━━━━━━━━┛
 ┏━━━━━━━━━━━━━━━━━━┓
 ┃ *NÚMERO DEl PROPIETARIO/A*
 ┃≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
-┣ ↠🐈 _${usedPrefix}owner_
-┣ ↠🐈 _${usedPrefix}contacto_
+┣ ↠ _${usedPrefix}owner_
+┣ ↠ _${usedPrefix}contacto_
 ┗━━━━━━━━━━━━━━━━━━┛
 ┏━━━━━━━━━━━━━━━━━━┓
 ┃ *UNE UN BOT A TU GRUPO*
@@ -288,13 +266,6 @@ let handler = async (m, { conn, usedPrefix }) => {
 ┣ ↠👤 _${usedPrefix}leave_
 ┗━━━━━━━━━━━━━━━━━━┛
 ┏━━━━━━━━━━━━━━━━━━┓
-┃ *CONVIERTETE EN BOT*
-┃≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
-┣ ↠❇️ _${usedPrefix}stop_
-┣ ↠❇️ _${usedPrefix}jadibot_
-┣ ↠❇️ _${usedPrefix}getcode_
-┗━━━━━━━━━━━━━━━━━━┛
-┏━━━━━━━━━━━━━━━━━━┓
 ┃ *LOGOS PERSONALIZADOS*
 ┃≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
 ┣ ↠🪅 _${usedPrefix}lolice_
@@ -336,9 +307,6 @@ let handler = async (m, { conn, usedPrefix }) => {
 ┣ ↠👑 _${usedPrefix}enable *autoread*_
 ┣ ↠💎 _${usedPrefix}disable *autoread*_
 ┗━━━━━━━━━━━━━━━━━━┛
-╭════• ೋ•✧๑♡๑✧•ೋ •════╮
-                       🐈 𝙂𝙖𝙩𝙖 𝘿𝙞𝙤𝙨 🐈
-╰════• ೋ•✧๑♡๑✧•ೋ •════╯
 `.trim()
     let mentionedJid = [who]
     conn.sendFile(m.chat, pp, 'lp.jpg', str, m, false, { contextInfo: { mentionedJid }})
